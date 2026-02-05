@@ -40,6 +40,7 @@ btn.forEach(btn => {
     count++;
     if(count === 9) {
       para.textContent = 'Tie, play again!';
+      disableBtn();
     }
   })
 })
@@ -77,7 +78,9 @@ function resetGame() {
     turnX = true;
     img.style.width = '0px';
     celebration.pause();
+    count = 0;
   })
 }
+
 
 resetBtn.addEventListener('click', resetGame);
